@@ -8,7 +8,8 @@
 {% block content %}
 
   {{ partial('_macro/post.njk', {post: page}) }}
-
+<!-- Insert google ad blocks -->
+        {{ partial('_custom/google_adsense.njk') }}
 {% endblock %}
 
 {% block sidebar %}

@@ -65,3 +65,20 @@
 
 {{ next_data('main', next_config()) }}
 {{- next_js('config.js') }}
+
+<script type="text/javascript">
+    function downloadJsAtOnload() {
+        setTimeout(function downloadJs() {
+            var element = document.createElement("script");
+            element.setAttribute("crossorigin", "anonymous");
+            element.async = true;
+            element.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5923374708970560";
+            document.body.appendChild(element);
+        }, 1500);
+    };
+    if (window.addEventListener)
+        window.addEventListener("load", downloadJsAtOnload, false);
+    else if (window.attachEvent)
+        window.attachEvent("onload", downloadJsAtOnload);
+    else window.onload = downloadJsAtOnload;
+</script>
